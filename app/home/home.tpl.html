@@ -1,0 +1,46 @@
+<h2>home</h2>
+<p>{{home.ctrlName}}</p>
+<!-- <p>{{home.tableData}}</p> -->
+
+<!-- <table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in home.tableData">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+        </tr>
+    </tbody>
+</table> -->
+<!-- 
+<table class="table">
+    <thead>
+        <tr>
+            <th ng-repeat="(k,v) in home.tableData[0]" >{{k}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in home.tableData">
+            <td ng-repeat="(k,v) in data">{{v}} </td>
+        </tr>
+    </tbody>
+</table> -->
+
+<table class="table table-bordered table-striped ">
+    <thead>
+        <tr>
+            <th ng-repeat="col in home.columnCollection" >{{col.title}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in home.tableData">
+            <td ng-repeat="col in home.columnCollection">{{data[col.id]}} </td>
+        </tr>
+    </tbody>
+</table>
+ 
+ 
