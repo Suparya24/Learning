@@ -12,6 +12,7 @@
       'ui.router',
       'ui.bootstrap',
       'home',
-      'formValidation'
+      'formValidation',
+      'directiveWithScope'
       ]);
 }());

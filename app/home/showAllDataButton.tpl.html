@@ -1,0 +1,14 @@
+<label>Show All Data:</label>
+<button type="button" ng-click="home.getAllData();">Click Me</button>
+<table class="table table-bordered table-striped ">
+    <thead>
+        <tr>
+            <th ng-repeat="col in home.columnCollection">{{col.title}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in home.newData ">
+            <td ng-repeat="col in home.columnCollection">{{data[col.id]}} </td>
+        </tr>
+    </tbody>
+</table>

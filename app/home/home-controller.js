@@ -46,6 +46,43 @@
             title: 'EmailId',
             isAction: false
         }];
+        vm.getAllData = getAllData;
+        vm.getDataByHeader = getDataByHeader;
+        vm.heraderData = [];
 
+        activate();
+
+        function activate() {
+           // getAllData(); 
+        }
+
+        function getAllData() {
+            vm.newData = vm.tableData;
+        }
+
+        function getDataByHeader() {
+            vm.filterDataArr = [];
+            angular.forEach(vm.tableData, function(obj) {
+                if (obj.hasOwnProperty(vm.newDatabyId)) {
+                    vm.filterDataArr.push(obj[vm.newDatabyId]);
+                }
+            });
+            if (vm.filterDataArr.length === 0) {
+                alert('Please select different Id');
+            }
+            // console.log(vm.newDatabyId);
+            // angular.forEach(vm.tableData, function(item) {
+            //     for (var key in item) {
+            //         if (key === vm.newDatabyId) {
+            //             vm.headerData.push(item.key);
+            //             // return vm.headerData;
+            //             console.log(vm.headerData);
+            //         }
+            //     }
+            // });
+            // // vm.headerData = _.map(vm.tableData, vm.newDatabyId);
+            // //  console.log(vm.headerData);
+
+        }
     }
 }());

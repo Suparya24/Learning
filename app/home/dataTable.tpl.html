@@ -1,0 +1,28 @@
+
+<!-- <p>{{home.tableData}}</p> -->
+<!-- <table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in home.tableData">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+        </tr>
+    </tbody>
+</table> -->
+<table class="table table-bordered table-striped ">
+    <thead>
+        <tr>
+            <th ng-repeat="col in myColcollection">{{col.title}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in data">
+            <td ng-repeat="col in myColcollection">{{row[col.id]}} </td>
+        </tr>
+    </tbody>
+</table>

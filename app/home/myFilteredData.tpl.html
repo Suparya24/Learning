@@ -1,0 +1,16 @@
+<label>Show Data By Header:</label>
+<select ng-model="home.newDatabyId" ng-change="home.getDataByHeader(home.newDatabyId);">
+    <option ng-repeat="col in home.columnCollection" value="{{col.id}}">{{col.title}}</option>
+</select>
+<table>
+    <thead>
+        <tr>
+            <th>{{home.newDatabyId}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="value in home.filterDataArr">
+        <td >{{value}}</td>
+        </tr>
+    </tbody>
+</table>

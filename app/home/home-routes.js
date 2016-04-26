@@ -12,6 +12,11 @@
         templateUrl: 'home/home.tpl.html',
         controller: 'HomeCtrl',
         controllerAs: 'home'
+      }).state('myDirective', {
+        url: '/myDirective',
+        templateUrl: 'home/myDirective.tpl.html',
+        controller: 'MyDirectiveCtrl',
+        controllerAs: 'vm'
       });
   }
 }());
